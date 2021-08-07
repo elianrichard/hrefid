@@ -19,7 +19,7 @@
       </li>
       <li>
         <div class="box"></div>
-        <a href="portfolio">
+        <a href="./#highlights">
           <h3>PORTFOLIO</h3>
         </a>
       </li>
@@ -114,7 +114,7 @@
       </div>
     </div>
     <div class="home-highlights-section">
-      <div class="fullpage flex-center home-highlights">
+      <div class="fullpage flex-center home-highlights" id="highlights">
         <div class="container flex-center">
           <div class="line"></div>
           <h1 class="align-center">Our Highlights</h1>
@@ -124,13 +124,14 @@
         <div class="container">
           <div class="images">
             <div class="main-image">
-              <div class="sub-image "></div>
+              <div class="sub-image"></div>
+              <div class="sub-image-main"></div>
             </div>
           </div>
           <div class="description clear">
-            <p>2020</p>
-            <h1><a href="portfolio-single.html">IME FTUI</a></h1>
-            <h3>Organization Website</h3>
+            <p></p>
+            <h1><a href="portfolio-single.html"></a></h1>
+            <h3></h3>
           </div>
         </div>
       </div>
@@ -139,44 +140,47 @@
           <div class="images">
             <div class="main-image">
               <div class="sub-image"></div>
+              <div class="sub-image-main"></div>
             </div>
           </div>
           <div class="description clear">
-            <p>2020</p>
-            <h1><a href="#">TIS FTUI</a></h1>
-            <h3>Organization Website</h3>
+            <p></p>
+            <h1><a href="#"></a></h1>
+            <h3></h3>
           </div>
         </div>
       </div>
-      <div class="fullpage flex-center home-highlights-content">
+      <div class="fullpage flex-center home-highlights-content hide">
         <div class="container">
           <div class="images">
             <div class="main-image">
               <div class="sub-image"></div>
+              <div class="sub-image-main"></div>
             </div>
           </div>
           <div class="description clear">
-            <p>2020</p>
-            <h1><a href="#">UI Esports Club</a></h1>
-            <h3>Organization Website</h3>
+            <p></p>
+            <h1><a href="#"></a></h1>
+            <h3></h3>
           </div>
         </div>
       </div>
-      <div class="fullpage flex-center home-highlights-content">
+      <div class="fullpage flex-center home-highlights-content hide">
         <div class="container">
           <div class="images">
             <div class="main-image">
               <div class="sub-image"></div>
+              <div class="sub-image-main"></div>
             </div>
           </div>
           <div class="description clear">
-            <p>2020</p>
-            <h1><a href="#">E-Lab FTUI</a></h1>
-            <h3>Organization Website</h3>
+            <p></p>
+            <h1><a href="#"></a></h1>
+            <h3></h3>
           </div>
         </div>
       </div>
-      <div class="page flex-center see-more">
+      <div class="page flex-center see-more hide">
         <a href="#" class="clear">
           <h2>See More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></h2>
         </a>
@@ -218,7 +222,14 @@
   </footer>
 
   <script src="anime.min.js"></script>
-  <script src="index.js"></script>
+  <script src="projects.js"></script>
   <script src="main.js"></script>
+  <script src="index.js"></script>
+  <script>
+    // scroll to top on refresh
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  </script>
 </body>
 </html>

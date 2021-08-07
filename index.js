@@ -1,3 +1,28 @@
+// highlight content load
+var homeHighlights = Array.from(document.querySelectorAll('.home-highlights-content'));
+var count = 0;
+projectList.forEach((a) => {
+  if (a.projectHighlight && count <= 4){
+    homeHighlights[count].querySelector('a').href = 'portfolio-single.html';
+    homeHighlights[count].querySelector('h1').querySelector('a').innerHTML = a.projectName;
+    homeHighlights[count].querySelector('h3').innerHTML = a.projectType;
+    homeHighlights[count].querySelector('p').innerHTML = a.projectYear;
+    homeHighlights[count].querySelector('.sub-image').style.backgroundImage = `url(${a.projectDescImg1})`;
+    homeHighlights[count].querySelector('.sub-image-main').style.backgroundImage = `url(${a.projectMainImg})`;
+    count++;
+  }
+})
+
+homeHighlights.forEach((a)=>{
+  a.querySelector('a').addEventListener('click', (e) => {
+    projectList.forEach((b) => {
+      if (b.highlightNo == (homeHighlights.indexOf(a) + 1)){
+        localStorage.setItem('projectPick', b.projectNo);
+      }
+    })
+  })
+})
+
 // WHY US
 var object = document.querySelectorAll('.big-paragraph')
 
@@ -38,6 +63,7 @@ function introAnimation(){
             document.querySelector('.intro').style.display = 'none';
             blurAnimation();
             document.querySelector('body').removeAttribute('style');
+            document.querySelector('html').style.scrollBehavior = 'smooth';
           }
         })
       }, 1500)
