@@ -37,9 +37,9 @@
   box-sizing: border-box;
 }
 
-/* html{
+html{
   scroll-behavior: smooth;
-} */
+}
 
 body{
   overflow-x: hidden;
@@ -961,6 +961,11 @@ footer .navigation .icon{
   color: #128C7E;
 }
 
+.contact-page .form-content{
+  width: 100%;
+  height: auto;
+}
+
 .contact-page .form{
   width: 60%;
   height: 350px;
@@ -1088,7 +1093,20 @@ footer .navigation .icon{
 
 .contact-page .submit-section svg{
   height: 15px;
-  
+}
+
+.contact-page .success{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1340px){
