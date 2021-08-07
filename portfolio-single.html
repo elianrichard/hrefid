@@ -49,18 +49,18 @@
       <div class="container title">
         <div class="main-image image clear"></div>
         <div class="text clear">
-          <h1>IME FTUI</h1>
-          <p>2020</p>
+          <h1></h1>
+          <p></p>
         </div>
-        <h3 class="clear">Organization Website</h3>
+        <h3 class="clear"></h3>
       </div>
       <div class="container description">
         <div class="sub-image-above sub-image">
           <div class="image clear"></div>
-          <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ducimus adipisci accusantium molestias! Ratione sapiente possimus adipisci inventore consequuntur?</p>
+          <p class="clear"></p>
         </div>
         <div class="sub-image-below sub-image">
-          <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ducimus adipisci accusantium molestias! Ratione sapiente possimus adipisci inventore consequuntur?</p>
+          <p class="clear"></p>
           <div class="image clear"></div>
         </div>
         <div class="documentation">
@@ -110,8 +110,36 @@
   </footer>
 
   <script src="anime.min.js"></script>
+  <script src="projects.js"></script>
   <script src="main.js"></script>
   <script>
+    // dynamic content load
+    if (localStorage.projectPick == null){
+      localStorage.projectPick = 1;
+    }
+
+    function projectContentLoad(){
+      var projectNumber = localStorage.projectPick;
+      projectList.forEach((a) => {
+        if (projectNumber == a.projectNo){
+          document.querySelector('.title').querySelector('h1').innerHTML = a.projectName;
+          document.querySelector('.title').querySelector('h3').innerHTML = a.projectType;
+          document.querySelector('.title').querySelector('p').innerHTML = a.projectYear;
+          document.querySelector('.sub-image-above').querySelector('p').innerHTML = a.projectDesc1;
+          document.querySelector('.sub-image-below').querySelector('p').innerHTML = a.projectDesc2;
+          document.querySelector('html').style.setProperty('--main-img', `url(${a.projectMainImg})`);
+          document.querySelector('html').style.setProperty('--sub-img-1', `url(${a.projectDescImg1})`);
+          document.querySelector('html').style.setProperty('--sub-img-2', `url(${a.projectDescImg2})`);
+          document.querySelector('html').style.setProperty('--doc-img-1', `url(${a.projectDocImg1})`);
+          document.querySelector('html').style.setProperty('--doc-img-2', `url(${a.projectDocImg2})`);
+          document.querySelector('html').style.setProperty('--doc-img-3', `url(${a.projectDocImg3})`);
+          document.querySelector('html').style.setProperty('--mobile-img', `url(${a.projectMobileImg})`);
+        }
+      })
+    }
+
+    projectContentLoad();
+
     anime.timeline({
       easing: 'easeOutExpo',
       duration: 800,
@@ -135,6 +163,7 @@
       scrollAnimation('.documentation', documentationAnime, 2.5)
       scrollAnimation('.mobile-version', mobileAnime, 2)
     });
+
     function scrollAnimation(element, animationFunction, trigger){
       var object = document.querySelector(`${element}`);
       var objectPosition = object.getBoundingClientRect().top;

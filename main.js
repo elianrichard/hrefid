@@ -1,5 +1,4 @@
 //FOOTER ANIMATION
-
 document.querySelector('footer').querySelector('.navigation').querySelectorAll('p').forEach((a)=>{
   a.classList.add('clear');
 })

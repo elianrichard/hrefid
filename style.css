@@ -818,7 +818,7 @@ footer .navigation .icon{
 
 .portfolio-single .title .main-image::before{
   background-position: center;
-  background-image: url("./assets/sample-cover.png");
+  background-image: var(--main-img);
 }
 
 .portfolio-single .title .text{
@@ -863,12 +863,12 @@ footer .navigation .icon{
 
 .portfolio-single .sub-image-above .image::before{
   background-position: center;
-  background-image: url("./assets/sample-cover.png");
+  background-image: var(--sub-img-1);
 }
 
 .portfolio-single .sub-image-below .image::before{
   background-position: center;
-  background-image: url("./assets/sample-cover.png");
+  background-image: var(--sub-img-2);
 }
 
 .portfolio-single .sub-image-above .image{
@@ -891,8 +891,17 @@ footer .navigation .icon{
 }
 
 .portfolio-single .documentation .image::before{
-  background-image: url("./assets/sample-cover.png");
   background-position: center;
+}
+
+.portfolio-single .documentation .image-1::before{
+  background-image: var(--doc-img-1);
+}
+.portfolio-single .documentation .image-2::before{
+  background-image: var(--doc-img-2);
+}
+.portfolio-single .documentation .image-3::before{
+  background-image: var(--doc-img-3);
 }
 
 .portfolio-single .documentation .image-1{
@@ -917,7 +926,7 @@ footer .navigation .icon{
 
 .portfolio-single .mobile-version .image::before{
   background-position: center;
-  background-image: url("./assets/sample-cover.png");
+  background-image: var(--mobile-img);
 }
 
 /* contact-us.html */
