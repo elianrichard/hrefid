@@ -59,10 +59,10 @@ function introAnimation(){
           opacity: [1, 0],
           easing: 'easeOutExpo',
           complete: () => {
-            document.querySelector('.intro').style.display = 'none';
-            blurAnimation();
             document.querySelector('body').removeAttribute('style');
             document.querySelector('html').style.scrollBehavior = 'smooth';
+            document.querySelector('.intro').style.display = 'none';
+            blurAnimation();
           }
         })
       }, 1500)
