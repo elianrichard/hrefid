@@ -1,3 +1,10 @@
+// PORTFOLIO click on index
+document.querySelector('.portfolio-click-index').addEventListener('click', () => {
+  if (hamburgerIcon.classList.contains('open') && !(animating)){
+    outroHamburger();
+  }
+})
+
 // highlight content load
 var homeHighlights = Array.from(document.querySelectorAll('.home-highlights-content'));
 var count = 0;

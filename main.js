@@ -36,6 +36,7 @@ function footerAnimation(){
   }
 }
 
+// HAMBURGER ANIMATION
 var navElement = document.querySelector('nav');
 var navList = navElement.querySelector('ul');
 var hamburgerIcon = navElement.querySelector('.hamburger');
@@ -70,34 +71,38 @@ hamburgerIcon.addEventListener('click', () => {
       }
     })
   } else if (hamburgerIcon.classList.contains('open') && !(animating)) {
-    crossIcon.querySelectorAll('div').forEach((a)=>{
-      a.style.transform = 'rotate(0deg)';
-    })
-    animating = true;
-    anime({
-      targets: 'nav ul li',
-      duration: 800,
-      easing: 'easeInExpo',
-      opacity: [1, 0],
-      translateX : [0, -100],
-      delay: anime.stagger(100),
-      complete: () => {
-        animating = false;
-        crossIcon.querySelectorAll('div').forEach((a)=>{
-          a.removeAttribute('style')
-        });
-        navList.querySelectorAll('li').forEach((a)=>{
-          a.removeAttribute('style');
-        })
-        hamburgerIcon.querySelector('.line').removeAttribute('style');
-        navElement.removeAttribute('style');
-        navList.removeAttribute('style');
-        document.querySelector('body').removeAttribute('style');
-        hamburgerIcon.classList.toggle('open')
-      }
-    })
+    outroHamburger();
   }
 })
+
+function outroHamburger(){
+  crossIcon.querySelectorAll('div').forEach((a)=>{
+    a.style.transform = 'rotate(0deg)';
+  })
+  animating = true;
+  anime({
+    targets: 'nav ul li',
+    duration: 800,
+    easing: 'easeInExpo',
+    opacity: [1, 0],
+    translateX : [0, -100],
+    delay: anime.stagger(100),
+    complete: () => {
+      animating = false;
+      crossIcon.querySelectorAll('div').forEach((a)=>{
+        a.removeAttribute('style')
+      });
+      navList.querySelectorAll('li').forEach((a)=>{
+        a.removeAttribute('style');
+      })
+      hamburgerIcon.querySelector('.line').removeAttribute('style');
+      navElement.removeAttribute('style');
+      navList.removeAttribute('style');
+      document.querySelector('body').removeAttribute('style');
+      hamburgerIcon.classList.toggle('open')
+    }
+  })
+}
 
 window.addEventListener('resize', () => {
   if (hamburgerIcon.classList.contains('open') && window.innerWidth > 1000){
