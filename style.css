@@ -153,6 +153,10 @@ p.big-paragraph{
   transition: filter .5s ease;
 }
 
+.image:hover::before{
+  filter: grayscale(40%);
+}
+
 .image-text{
   position: relative;
 }

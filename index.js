@@ -40,7 +40,6 @@ object.forEach((a) => {
 })
 
 // INTRO
-document.querySelector('body').style.overflow = 'hidden'
 function introAnimation(){
   anime({
     targets: '.intro svg path',
@@ -70,8 +69,15 @@ function introAnimation(){
     }
   })
 }
-
-introAnimation();
+if (localStorage.introAnimationToggle == 1){
+  document.querySelector('.intro').style.display = 'none';
+  document.querySelector('html').style.scrollBehavior = 'smooth';
+  blurAnimation();
+  localStorage.setItem('introAnimationToggle', 0);
+} else if (localStorage.introAnimationToggle == 0){
+  document.querySelector('body').style.overflow = 'hidden';
+  introAnimation();
+}
 
 // LANDING BLUR
 var mainText = document.querySelector('.main-title');

@@ -1,3 +1,11 @@
+//Portfolio intro click
+var portfolioNav = document.querySelector('.portfolio-click');
+if(portfolioNav){
+  portfolioNav.addEventListener('click', () => {
+    localStorage.setItem('introAnimationToggle', 1)
+  })
+}
+
 //FOOTER ANIMATION
 document.querySelector('footer').querySelector('.navigation').querySelectorAll('p').forEach((a)=>{
   a.classList.add('clear');
