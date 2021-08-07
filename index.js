@@ -74,7 +74,7 @@ if (localStorage.introAnimationToggle == 1){
   document.querySelector('html').style.scrollBehavior = 'smooth';
   blurAnimation();
   localStorage.setItem('introAnimationToggle', 0);
-} else if (localStorage.introAnimationToggle == 0){
+} else if (localStorage.introAnimationToggle == 0 || localStorage.introAnimationToggle == null){
   document.querySelector('body').style.overflow = 'hidden';
   introAnimation();
 }
