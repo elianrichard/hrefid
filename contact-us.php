@@ -54,7 +54,7 @@
           </svg> Whatsapp</a>, or by filling the form below.</p>
         </div>
         <div class="form-content flex-center">
-          <form action="action.php" method="post" class="form" autocomplete="off">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" autocomplete="off">
             <div>
               <div class="content">
                 <input type="text" name="name" required>
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="submit-section clear">
-              <button type="submit" name="submit" class="submitBtn">
+              <button type="submit">
                 <h3>SEND <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></h3>
               </button>
             </div>
@@ -191,20 +191,16 @@
       translateX: [-50, 0],
     }, '+=300')
 
-    var animated = false;
-    document.querySelector('.submitBtn').addEventListener('click', (e) => {
-      if (animated == false){
-        e.preventDefault();
-        submitAnimation();
-      }
-    })
 
+    // document.querySelector('.form').addEventListener('submit', (e) => {
+    //   e.preventDefault();
+    //   submitAnimation;
+    // })
     function submitAnimation(){
       anime.timeline({
         duration: 800,
         complete: () => {
-          animated = true;
-          document.querySelector('.submitBtn').click();
+          document.querySelector('.form').reset();
         }
       }).add({
         targets: '.success',
