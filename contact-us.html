@@ -67,7 +67,7 @@
             </div>
             <div>
               <div class="content">
-                <input type="text" name="email" required>
+                <input type="text" name="email" required class='emailInput'>
                 <label for="email" class="label-input">
                   <p>
                     <span class="content-label">Email Address</span>
@@ -192,7 +192,37 @@
     }, '+=300')
 
     var animated = false;
+    var emailFlag = false;
+    var inputFlag = false;
+    var formInput = document.querySelector('.form').querySelectorAll('input');
+    var emailInput = document.querySelector('.emailInput');
+    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
     document.querySelector('.submitBtn').addEventListener('click', (e) => {
+      for (let i = 0; i < formInput.length; i++){
+        if (formInput[i].value != ''){
+          inputFlag = true;
+        } else {
+          inputFlag = false;
+          break;
+        }
+      }
+
+      if (inputFlag == true){
+        if (emailInput.value.match(emailFormat)){
+          emailFlag = true;
+          document.querySelector('.success').querySelector('h1').innerHTML = "Thankyou!";
+          document.querySelector('.success').querySelector('p').innerHTML = "We will reply in a short moment.";
+        } else {
+          emailFlag = false;
+          document.querySelector('.success').querySelector('h1').innerHTML = "Error!";
+          document.querySelector('.success').querySelector('p').innerHTML = "Please input a valid email.";
+        }
+      } else {
+        document.querySelector('.success').querySelector('h1').innerHTML = "Error!";
+        document.querySelector('.success').querySelector('p').innerHTML = "Please input all fields.";
+      }
+
       if (animated == false){
         e.preventDefault();
         submitAnimation();
@@ -203,8 +233,14 @@
       anime.timeline({
         duration: 800,
         complete: () => {
-          animated = true;
-          document.querySelector('.submitBtn').click();
+          if (inputFlag == true){
+            if (emailFlag == true){
+              animated = true;
+              document.querySelector('.submitBtn').click();
+            } else {
+              emailInput.focus();
+            }
+          }
         }
       }).add({
         targets: '.success',
