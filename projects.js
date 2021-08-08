@@ -15,6 +15,8 @@ var projectList = [
     projectDocImg2: './assets/sample-cover.png',
     projectDocImg3: './assets/sample-cover.png',
     projectMobileImg: './assets/sample-cover.png',
+    projectSite: 'https://ime.eng.ui.ac.id',
+    projectDemo: '',
   },
   {
     projectNo: 2,
@@ -32,5 +34,7 @@ var projectList = [
     projectDocImg2: './assets/service-organization.png',
     projectDocImg3: './assets/service-organization.png',
     projectMobileImg: './assets/service-organization.png',
+    projectSite: '',
+    projectDemo: '',
   },
 ]
