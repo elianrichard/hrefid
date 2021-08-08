@@ -15,7 +15,12 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   
   $headers .= "From: ".$name."< email:".$email." Phone: ".$phone." >"."\r\n";
 
-  $txt = "From: ".$name."< email:".$email." Phone: ".$phone." >"."<br>".$company."<br><br>".$message;
+  $txt = '<h4>Name</h4><p>'.$name.'</p>
+  <h4>Email</h4><p>'.$email.'</p>
+  <h4>Company</h4><p>'.$company.'</p>
+  <h4>Phone</h4><p>'.$phone.'</p>
+  <h4>Message</h4><p>'.$message.'</p>
+  ';
   
   mail($mailTo, $subject, $txt, $headers);
 
