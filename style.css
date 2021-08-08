@@ -207,15 +207,10 @@ p.big-paragraph{
   position: absolute; 
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: var(--primary-color);
   z-index: 10;
   opacity: 1;
 }
-
 .intro svg path{
   fill: transparent;
   transition: fill .8s ease;
