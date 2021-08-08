@@ -14,7 +14,7 @@ var projectList = [
     projectDocImg1: './assets/ime-ftui/pic4.png',
     projectDocImg2: './assets/ime-ftui/pic5.png',
     projectDocImg3: './assets/ime-ftui/pic6.png',
-    projectMobileImg: './assets/ime-ftui/pic1.png',
+    projectMobileImg: './assets/ime-ftui/pic7.png',
     projectSite: 'https://ime.eng.ui.ac.id',
     projectDemo: '',
   },

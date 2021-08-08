@@ -727,6 +727,7 @@ footer .navigation .icon{
   height: 100%;
   background-size: cover;
   background-position: center center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 /* PORTFOLIO.html */
@@ -809,7 +810,7 @@ footer .navigation .icon{
   width: 100%;
   height: 500px;
   margin-bottom: 3em;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
 .portfolio-single .title{
@@ -844,7 +845,7 @@ footer .navigation .icon{
 .portfolio-single .sub-image .image{
   width: 55%;
   height: 450px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
 .portfolio-single .sub-image p{
@@ -895,7 +896,7 @@ footer .navigation .icon{
 }
 
 .portfolio-single .documentation .image{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
 .portfolio-single .documentation .image::before{
@@ -933,7 +934,7 @@ footer .navigation .icon{
 .portfolio-single .mobile-version .image{
   width: 100%;
   height: 500px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
 .portfolio-single .mobile-version .image::before{
