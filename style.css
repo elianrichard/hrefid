@@ -964,6 +964,7 @@ footer .navigation .icon{
 .contact-page .form-content{
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .contact-page .form{
