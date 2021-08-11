@@ -8,12 +8,12 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   $message = $_POST['message'];
   
   $subject = 'Email from elianrichard.my.id contact form';
-  $mailTo = 'admin@hrefid.elianrichard.my.id';
+  $mailTo = 'admin@hrefid.com';
   
   $headers = "MIME-Version: 1.0"."\r\n";
   $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
   
-  $headers .= "From: ".$name."< email:".$email." Phone: ".$phone." >"."\r\n";
+  $headers .= "From: ".$name."<".$email.">"."\r\n";
 
   $txt = '<h4>Name</h4><p>'.$name.'</p>
   <h4>Email</h4><p>'.$email.'</p>
