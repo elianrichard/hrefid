@@ -524,12 +524,12 @@ footer .navigation .icon{
 }
 
 .home-about .first-img::before{
-  background-image: url("./assets/about-image-1.png");
+  background-image: url("./assets/about-image-1.webp");
   background-position: center;
 }
 
 .home-about .second-img::before{
-  background-image: url("./assets/about-image-2.png");
+  background-image: url("./assets/about-image-2.webp");
   background-position: center;
 }
 
@@ -611,16 +611,16 @@ footer .navigation .icon{
 }
 
 .home-service .card-portfolio::before{
-  background-image: url("./assets/service-portfolio.png");
+  background-image: url("./assets/service-portfolio.webp");
 }
 
 .home-service .card-organization::before{
-  background-image: url("./assets/service-organization.png");
+  background-image: url("./assets/service-organization.webp");
   background-position: center;
 }
 
 .home-service .card-event::before{
-  background-image: url("./assets/service-event.png");
+  background-image: url("./assets/service-event.webp");
   background-position: center;
   filter: grayscale(100%) brightness(48%);
 }
@@ -779,7 +779,7 @@ footer .navigation .icon{
   filter: grayscale(100%) brightness(50%);
   transform: translate(-50%, -50%);
   transition: filter .5s ease;
-  background-image: url("./assets/about-image-1.png")
+  background-image: url("./assets/about-image-1.webp")
 }
 
 .portfolio-page .inner-border{
