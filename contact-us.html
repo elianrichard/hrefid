@@ -54,10 +54,11 @@
           </svg> Whatsapp</a>, or by filling the form below.</p>
         </div>
         <div class="form-content flex-center">
-          <form action="action.php" method="post" class="form" autocomplete="off">
+          <!-- <form action="action.php" method="post" class="form" autocomplete="off"> -->
+          <form action="contact-us.html" method="post" class="form" autocomplete="off">
             <div>
               <div class="content">
-                <input type="text" name="name" required>
+                <input type="text" name="name" required class='nameInput'>
                 <label for="name" class="label-input">
                   <p>
                     <span class="content-label">Full Name</span>
@@ -87,7 +88,7 @@
             </div>
             <div>
               <div class="content">
-                <input type="text" name="company" required>
+                <input type="text" name="company" required class='compInput'>
                 <label for="company" class="label-input">
                   <p>
                     <span class="content-label">Company Name / Personal</span>
@@ -97,7 +98,7 @@
             </div>
             <div class="div-message">
               <div class="content">
-                <textarea name="message" required></textarea>
+                <textarea name="message" required class="msgInput"></textarea>
                 <label for="message" class="label-input">
                   <p>
                     <span class="content-label">Message</span>
@@ -204,7 +205,7 @@
     var phoneFormat = /^[-+]?[0-9]+$/;
 
     var emailInput = document.querySelector('.emailInput');
-    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/;
     
     document.querySelector('.submitBtn').addEventListener('click', (e) => {
       for (let i = 0; i < formInput.length; i++){
@@ -245,6 +246,12 @@
     })
 
     function submitAnimation(){
+      var nameInputVal = encodeURI(document.querySelector('.nameInput').value);
+      var msgInputVal = encodeURI(document.querySelector('.msgInput').value);
+      var compInputVal = encodeURI(document.querySelector('.compInput').value);
+      var emailInputVal = encodeURI(emailInput.value);
+      var phoneInputVal = encodeURI(phoneInput.value);
+
       anime.timeline({
         duration: 800,
         complete: () => {
@@ -252,6 +259,7 @@
             if (emailFlag == true){
               if (phoneFlag == true){
                 animated = true;
+                window.open(`https://wa.me/6281398777982?text=Nama%3A%20${nameInputVal}%0ANomor%20Telepon%3A%20${phoneInputVal}%0AEmail%3A%20${emailInputVal}%0ANama%20Perusahaan%3A%20${compInputVal}%0APesan%3A%0A${msgInputVal}%0A`, '_blank').focus();
                 document.querySelector('.submitBtn').click();
               } else {
                 phoneInput.focus();
