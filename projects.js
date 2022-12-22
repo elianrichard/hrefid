@@ -20,7 +20,7 @@ var projectList = [
   },
   {
     projectNo: 2,
-    projectHighlight: true,
+    projectHighlight: false,
     highlightNo: 2,
     projectName: 'TIS FTUI',
     projectType: 'Organization Website',
