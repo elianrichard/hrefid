@@ -34,7 +34,7 @@ var projectList = [
     projectDocImg2: './assets/service-organization.webp',
     projectDocImg3: './assets/service-organization.webp',
     projectMobileImg: './assets/service-organization.webp',
-    projectSite: '',
+    projectSite: 'https://www.tisftui.com/',
     projectDemo: '',
   },
 ]
