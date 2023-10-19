@@ -147,7 +147,7 @@ document
 document.querySelector(".navigation").querySelectorAll("a")[0].href =
   "https://wa.me/628118121011?text=Halo%20href.id%21%20Mau%20tanya-tanya%20dong%20soal%20website.";
 document.querySelector(".navigation").querySelectorAll("a")[1].href =
-  "mailto:admin@hrefid.com";
+  "mailto:href.indonesia@gmail.com";
 document.querySelector(".navigation").querySelectorAll("a")[2].href =
   "https://www.instagram.com/href.id/";
 document.querySelector(".navigation").querySelectorAll("a")[3].href =

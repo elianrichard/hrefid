@@ -8,7 +8,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   $message = $_POST['message'];
   
   $subject = 'Email from elianrichard.my.id contact form';
-  $mailTo = 'admin@hrefid.com';
+  $mailTo = 'href.indonesia@gmail.com';
   
   $headers = "MIME-Version: 1.0"."\r\n";
   $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
