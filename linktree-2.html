@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>href.id - Linktree</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-      *{
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      .flex-center{
+      .flex-center {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .container{
+      .container {
         width: 100vw;
         height: 100vh;
         font-family: Poppins;
       }
-      a{
+      a {
         text-decoration: none;
         color: inherit !important;
         width: 100%;
@@ -34,12 +34,12 @@
         justify-content: center;
         align-items: center;
       }
-      ul{
+      ul {
         list-style-type: none;
         width: 100%;
         margin-top: 40px;
       }
-      li{
+      li {
         opacity: 0;
         color: #0f0f0f;
         width: 500px;
@@ -47,91 +47,134 @@
         margin: 10px 0px;
         border: solid 1px #0f0f0f;
         background-color: #ffffff;
-        transition: color .5s ease, background .5s ease;
+        transition: color 0.5s ease, background 0.5s ease;
       }
-      li:hover{
+      li:hover {
         background-color: #0f0f0f;
         color: #ffffff;
       }
 
-      svg path{
+      svg path {
         fill: transparent;
-        transition: fill .8s ease, stroke .8s ease;
+        transition: fill 0.8s ease, stroke 0.8s ease;
       }
-      svg .shape-1{
+      svg .shape-1 {
         stroke-dasharray: 20;
         stroke-dashoffset: 80;
       }
-      svg .shape-2{
+      svg .shape-2 {
         stroke-dasharray: 20;
         stroke-dashoffset: 80;
       }
-      svg .shape-3{
+      svg .shape-3 {
         stroke-dasharray: 130;
         stroke-dashoffset: 230;
       }
-      svg .shape-4{
+      svg .shape-4 {
         stroke-dasharray: 130;
         stroke-dashoffset: 230;
       }
 
-      @media screen and (max-width: 600px){
-        li{
+      @media screen and (max-width: 600px) {
+        li {
           width: 80%;
         }
       }
-      @media screen and (max-height: 600px){
-        .container{
+      @media screen and (max-height: 600px) {
+        .container {
           height: auto;
           margin-top: 40px;
         }
-        ul{
+        ul {
           margin-bottom: 40px;
         }
       }
     </style>
   </head>
-<body>
-  <div class="container flex-center">
-    <div class="logo">
-      <svg width="72" height="99" viewBox="0 0 72 99" fill="transparent" xmlns="http://www.w3.org/2000/svg">
-        <path class="shape-1" d="M71.3948 90.6556H45.3268L41.2772 86.6043L54.3112 73.572L71.3948 90.6556Z" fill="transparent" stroke="#0f0f0f" stroke-width="1px"/>
-        <path class="shape-2" d="M30.4907 11.5802L17.4567 24.6124L0.374878 7.52881H26.4393L30.4907 11.5802Z" fill="transparent" stroke="#0f0f0f" stroke-width="1px"/>
-        <path class="shape-3" d="M71.7679 52.8578L26.4393 98.1846H0.374878L26.6153 71.9424L45.7017 52.8578L33.7483 40.9044L46.7805 27.8704L71.7679 52.8578Z" fill="transparent" stroke="#0f0f0f" stroke-width="1px"/>
-        <path class="shape-4" d="M71.3948 0L46.7805 24.6125L45.1526 26.2422L30.4907 40.9041L28.6709 42.7239L27.0395 44.3554L26.6382 44.7566L26.0662 45.3268L38.0196 57.2802L24.9856 70.3142L0 45.3268L13.5514 31.7754L13.5567 31.7807L15.1846 30.151L17.462 27.8737L19.0899 26.244L32.1221 13.21L33.7501 11.5821L45.3268 0H71.3948Z" fill="transparent" stroke="#0f0f0f" stroke-width="1px"/></svg>  
+  <body>
+    <div class="container flex-center">
+      <div class="logo">
+        <svg
+          width="72"
+          height="99"
+          viewBox="0 0 72 99"
+          fill="transparent"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="shape-1"
+            d="M71.3948 90.6556H45.3268L41.2772 86.6043L54.3112 73.572L71.3948 90.6556Z"
+            fill="transparent"
+            stroke="#0f0f0f"
+            stroke-width="1px"
+          />
+          <path
+            class="shape-2"
+            d="M30.4907 11.5802L17.4567 24.6124L0.374878 7.52881H26.4393L30.4907 11.5802Z"
+            fill="transparent"
+            stroke="#0f0f0f"
+            stroke-width="1px"
+          />
+          <path
+            class="shape-3"
+            d="M71.7679 52.8578L26.4393 98.1846H0.374878L26.6153 71.9424L45.7017 52.8578L33.7483 40.9044L46.7805 27.8704L71.7679 52.8578Z"
+            fill="transparent"
+            stroke="#0f0f0f"
+            stroke-width="1px"
+          />
+          <path
+            class="shape-4"
+            d="M71.3948 0L46.7805 24.6125L45.1526 26.2422L30.4907 40.9041L28.6709 42.7239L27.0395 44.3554L26.6382 44.7566L26.0662 45.3268L38.0196 57.2802L24.9856 70.3142L0 45.3268L13.5514 31.7754L13.5567 31.7807L15.1846 30.151L17.462 27.8737L19.0899 26.244L32.1221 13.21L33.7501 11.5821L45.3268 0H71.3948Z"
+            fill="transparent"
+            stroke="#0f0f0f"
+            stroke-width="1px"
+          />
+        </svg>
+      </div>
+      <ul class="flex-center">
+        <li><a href="https://hrefid.com">Website</a></li>
+        <li>
+          <a
+            href="https://wa.me/628118121011?text=Halo%20href.id%21%20Mau%20tanya-tanya%20dong%20soal%20website."
+            target="_blank"
+            >Whatsapp</a
+          >
+        </li>
+        <li><a href="mailto:admin@hrefid.com" target="_blank">Email</a></li>
+        <li>
+          <a href="https://www.instagram.com/href.id/" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul>
     </div>
-    <ul class="flex-center">
-      <li><a href="https://hrefid.com">Website</a></li>
-      <li><a href="https://wa.me/6281398777982?text=Halo%20href.id%21%20Mau%20tanya-tanya%20dong%20soal%20website." target="_blank">Whatsapp</a></li>
-      <li><a href="mailto:admin@hrefid.com" target="_blank">Email</a></li>
-      <li><a href="https://www.instagram.com/href.id/" target="_blank">Instagram</a></li>
-      <li><a href="#" target="_blank">LinkedIn</a></li>
-    </ul>
-  </div>
-  
 
-  <script src="anime.min.js"></script>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      anime({
-        targets: 'path',
-        loop: true,
-        direction: 'alternate',
-        easing: 'easeInOutSine',
-        duration: 1000,
-        strokeDashoffset: [anime.setDashoffset, 0],
-      })
-      setTimeout(() => {
+    <script src="anime.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
         anime({
-          targets: 'li',
-          duration: 800,
-          easing: 'easeOutExpo',
-          opacity: [0, 1],
-          translateY: [20, 0],
-          delay: anime.stagger(250),
-      }, 500)
-      })
-    })
-  </script>
-</body>
+          targets: "path",
+          loop: true,
+          direction: "alternate",
+          easing: "easeInOutSine",
+          duration: 1000,
+          strokeDashoffset: [anime.setDashoffset, 0],
+        });
+        setTimeout(() => {
+          anime(
+            {
+              targets: "li",
+              duration: 800,
+              easing: "easeOutExpo",
+              opacity: [0, 1],
+              translateY: [20, 0],
+              delay: anime.stagger(250),
+            },
+            500
+          );
+        });
+      });
+    </script>
+  </body>
 </html>
